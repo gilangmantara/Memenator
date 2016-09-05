@@ -10,10 +10,12 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
+        //multiDexEnabled true
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -32,10 +34,15 @@ dependencies {
     // Image Loader Library (Load images)
     compile 'com.squareup.picasso:picasso:2.5.2'
 
+    // Image Display pinch to zoom support
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.5.0'
+
     // Reactive Library (Reactive)
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'io.reactivex:rxjava:1.1.6'
 
     // RxBinding Android UI widgets Libs (Binding TextView)
     compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+
+    //compile 'com.android.support:multidex:1.0.1'
 }
